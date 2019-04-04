@@ -18,7 +18,7 @@
 				"skipLineCount": 0,
 				"firstRowAsHeader": true
 			},
-			"fileName": "usersStage.csv",
+			"fileName": "users.csv",
 			"folderPath": "user"
 		}
 	},

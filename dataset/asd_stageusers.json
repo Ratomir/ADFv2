@@ -1,0 +1,13 @@
+{
+	"name": "asd_stageusers",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "asd_conf19",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"typeProperties": {
+			"tableName": "[dbo].[StageUsers]"
+		}
+	}
+}
