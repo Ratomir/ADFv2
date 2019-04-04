@@ -1,0 +1,24 @@
+{
+	"name": "hdinsight",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "HDInsight",
+		"typeProperties": {
+			"clusterUri": "https://hd-conf-19.azurehdinsight.net",
+			"userName": "ratomir",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "hdinsight-password"
+			},
+			"isEspEnabled": false,
+			"linkedServiceName": {
+				"referenceName": "hdinsightsconf",
+				"type": "LinkedServiceReference"
+			}
+		}
+	}
+}

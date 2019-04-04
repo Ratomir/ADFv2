@@ -1,0 +1,21 @@
+{
+	"name": "ProductCategoryJoin",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "abs_conf19",
+			"type": "LinkedServiceReference"
+		},
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "",
+				"folderPath": "productjoin",
+				"container": "dataflowoutput"
+			},
+			"columnDelimiter": "|"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

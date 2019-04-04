@@ -1,0 +1,26 @@
+{
+	"name": "adl_users",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adl_conf19",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureDataLakeStoreFile",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": "|",
+				"rowDelimiter": "",
+				"quoteChar": "\"",
+				"nullValue": "\\N",
+				"encodingName": null,
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "usersStage.csv",
+			"folderPath": "user"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
