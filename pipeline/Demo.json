@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Data1",
+				"name": "Copy Data",
 				"type": "Copy",
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -22,7 +22,18 @@
 						"writeBatchSize": 10000,
 						"preCopyScript": "TRUNCATE TABLE dbo.StageUsers;"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Name": "Name",
+							"Email": "Email",
+							"StreetAddress": "StreetAddress",
+							"City": "City",
+							"Country": "Country",
+							"Id": "UserId"
+						}
+					}
 				},
 				"inputs": [
 					{
@@ -37,6 +48,9 @@
 					}
 				]
 			}
-		]
+		],
+		"folder": {
+			"name": "1_Demo"
+		}
 	}
 }
